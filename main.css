@@ -1,0 +1,29 @@
+.container {
+    max-width: 600px;
+}
+
+.game {
+    font-size: 20px;
+}
+
+.win {
+    border-color: green;
+}
+.lose {
+    border-color: crimson;
+}
+
+.text-won {
+    color: green;
+}
+.text-lose {
+    color: crimson;
+}
+
+#guess-value {
+    padding: 5px;
+}
+
+.guess-input{
+    padding: 5px;
+}
