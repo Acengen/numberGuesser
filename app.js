@@ -1,8 +1,9 @@
 let min =1,
     max = 10,
-    winningNum = 2,
+    winningNum = Math.floor(Math.random() * 10 + 1),
     guessesLeft = 3;
- 
+    
+
 const subBtn = document.querySelector('#guess-value');
 const msg = document.querySelector('.message');
 const game = document.querySelector('.game');
@@ -35,9 +36,9 @@ function won(input) {
 subBtn.addEventListener('click', e => {
     e.preventDefault();
 
-    const input = parseFloat(document.querySelector('.guess-input').value);
+    const input = document.querySelector('.guess-input').value;
     
-    if(input > 10 || input < 1) {
+    if(input > 10 || input < 1 || !input.length) {
         msg.innerHTML = 'Please enter numbers between 1 and 10';
         msg.classList.add('text-lose');
         clearFields();
